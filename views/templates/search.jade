@@ -1,0 +1,19 @@
+//- do not put 'extend layout' in here!
+p Technology:
+		select 
+			option Javascript	
+			option Node.js
+			option Angualar.js
+			option MongoDB
+			option Mongoose
+		p Keywords:
+			input(ng-model="newKeyword" name="keywords" placeholder="Keywords")
+			button(ng-click="addKeyword()") Submit
+		p Analogy:
+			input(ng-model="newAnalogy" name="analogy" placeholder="$route is like a bridge between the controller and the view")
+			button(ng-click="addAnalogy()") Submit
+
+.userInput
+		p{{keywords}}
+
+		p{{analogies}}
