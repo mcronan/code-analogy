@@ -21,6 +21,11 @@ app.get('/templates/search', indexController.search)
 app.get('/api/analogies', apiController.get);
 app.post('/api/analogies', apiController.create);
 
+
+app.listen(app.get('port'), function() {
+  console.log("Node app is running on port:" + app.get('port'))
+})
+// app.listen(process.env.PORT || 5000);
+
 // var server = app.listen(port, function() {
 // 	console.log('Express server listening on port ' + port);
-app.listen(process.env.PORT || 5000);
