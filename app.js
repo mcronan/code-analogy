@@ -5,7 +5,7 @@ var apiController = require('./controllers/api.js');
 var gzippo = require('gzippo');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/codeanalogy')
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/codeanalogy') 
 
 var app = express();
 app.set('view engine', 'jade');
