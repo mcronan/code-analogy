@@ -1,7 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var indexController = require('./controllers/index.js');
-var apiController = require('./controllers/api.js')
+var apiController = require('./controllers/api.js');
+var gzippo = require('gzippo');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/codeanalogy')
