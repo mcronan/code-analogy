@@ -1,19 +1,45 @@
 //- do not put 'extend layout' in here!
-p Technology:
-		select 
-			option Javascript	
-			option Node.js
-			option Angualar.js
-			option MongoDB
-			option Mongoose
-		p Keywords:
-			input(ng-model="newKeyword" name="keywords" placeholder="Keywords")
-			button(ng-click="addKeyword()") Submit
-		p Analogy:
-			input(ng-model="newAnalogy" name="analogy" placeholder="$route is like a bridge between the controller and the view")
-			button(ng-click="addAnalogy()") Submit
 
-.userInput
-		p{{keywords}}
+form(ng-submit="addAnalogy()")
+		p 
+		b Technology/library
+			select(ng-model="newAnalogy.technology") Technology
+				option(value="General") General coding
+				option(value="JavaScript") JavaScript	
+				option(value="Node") Node.js
+				option(value="Angular") Angualar.js
+				option(value="HTML/CSS") HTML/CSS
+				option(value="MongoDB") MongoDB
+				option(value="Mongoose") Mongoose
+				option(value="jQuery") jQuery
+				option(value="Bootstrap") Bootstrap
+				option(value="Materialize") Materialize
+				option(value="Git/Github") Git/Github		
+				option(value="Underscore") Underscore
+				option(value="Passport") Passport
+				option(value="OOP") OOP
+				option(value="Ajax") Ajax
+				option(value="APIs") APIs
+			//- p Keywords:
+			//- 	input(ng-model="newAnalogy.keyword" name="keywords" placeholder="Keywords")
+			p Analogy:
+				input(ng-model="newAnalogy.analogy" id="analogy" name="analogy" placeholder="$scope is like the glue between the view and the controller!")
+			p Submitted by (optional) :
+				input(ng-model="newAnalogy.user" name="user")
+				button(type="submit") Submit All
 
-		p{{analogies}}
+	.userInput
+		.div(ng-repeat="analogy in analogies")
+			p 
+			b Technology: 
+			{{analogy.technology}}
+			//- p Keyword:
+			//- 	span(ng-repeat="keyword in analogy.keyword")  {{keyword}} 
+			p 
+			b Analogy:  
+			{{analogy.analogy}}
+			p 
+			b Submitted by:  
+			{{analogy.user}}
+			br 
+			br

@@ -1,0 +1,26 @@
+#analogy {
+	height: 60px;
+	width: 900px;
+	font-size: 20px;
+
+}
+
+.userInput {
+	padding-top: 40px;
+}
+
+::-webkit-input-placeholder {
+   font-size: 20px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
