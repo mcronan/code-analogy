@@ -24,4 +24,3 @@ app.post('/api/analogies', apiController.create);
 // var server = app.listen(port, function() {
 // 	console.log('Express server listening on port ' + port);
 app.listen(process.env.PORT || 5000);
-});
