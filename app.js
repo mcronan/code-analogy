@@ -20,6 +20,6 @@ app.get('/templates/search', indexController.search)
 app.get('/api/analogies', apiController.get);
 app.post('/api/analogies', apiController.create);
 
-var server = app.listen(3001, function() {
-	console.log('Express server listening on port ' + server.address().port);
+var server = app.listen(port, function() {
+	console.log('Express server listening on port ' + port);
 });
